@@ -1,0 +1,176 @@
+.header {
+    width: 100%;
+    max-width: 1504px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.navContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+}
+
+.logoSection {
+    display: flex;
+    align-self: flex-start;
+    font-size: 20px;
+    color: #111827;
+
+}
+
+.logoText {
+    font-weight: 80;
+    flex-grow: 1;
+}
+
+.logoIcon {
+    width: 29px;
+    height: auto;
+    aspect-ratio: 1.32;
+    object-fit: contain;
+    margin: auto 0;
+}
+
+.mainNav {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    gap: 120px;
+}
+
+.menuList {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin: auto 0;
+    font-size: 16px;
+    color: #111827;
+}
+
+.menuItem {
+    align-self: stretch;
+    margin: auto 0;
+    list-style: none;
+}
+
+.searchUserContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.searchBox {
+    display: flex;
+    overflow: hidden;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 12px;
+    width: 320px;
+    font-size: 14px;
+    color: #6B7280;
+    background: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 36px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    min-height: 36px;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.userSection {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.userName {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 24px;
+    line-height: 1;
+    color: black;
+    background: #C7D2FE;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Разделитель */
+.divider {
+    width: 100%;
+    max-width: 1504px;
+    height: 2px;
+    background: #E5E7EB;
+    margin-top: 10px;
+}
+
+
+.categoryNav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 1504px;
+    max-width: 100%;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.categoryItem {
+    text-decoration: none;
+    font-size: 16px;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.dropdownButton {
+    text-decoration: none;
+    display: flex;
+    overflow: hidden;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #111827;
+}
+
+.dropdownIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+
+}
+
+@media (max-width: 768px) {
+    .navContainer,
+    .mainNav,
+    .searchUserContainer {
+        gap: 20px;
+    }
+
+    .menuList,
+    .categoryNav {
+        gap: 16px;
+    }
+
+    .searchBox {
+        width: 100%;
+    }
+}

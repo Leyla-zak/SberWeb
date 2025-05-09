@@ -1,0 +1,64 @@
+.candidates-section {
+    width: 100%;
+    max-width: 1296px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #111827;
+    font-weight: 600;
+    width: 100%;
+}
+
+.candidates-scroll-container {
+    overflow-x: auto;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.candidates-list {
+    display: inline-flex;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.candidate-item {
+    flex: 0 0 auto;
+    width: 300px;
+}
+
+/* Стили для скроллбара */
+.candidates-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.candidates-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.candidates-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .candidates-section {
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .candidate-item {
+        width: 280px;
+    }
+}

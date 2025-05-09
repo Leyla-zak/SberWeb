@@ -1,0 +1,129 @@
+.heroSection {
+    margin: 90px auto;
+    width: 100%;
+    max-width: 1504px;
+}
+
+.columnsContainer {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.leftColumn {
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rightColumn {
+    width: 41%;
+    margin-left: 10px;
+}
+
+.headingBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.headingText {
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 80;
+    color: #111827;
+}
+
+.highlightedText {
+    display: inline-block;
+    padding: 0 20px;
+    margin-top: 12px;
+    background-color: #fde68a;
+    border-radius: 12px;
+    white-space: nowrap;
+    font-size: 60px;
+    font-weight: 80;
+}
+
+.description {
+    margin-top: 28px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #71717a;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 60px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.primaryButton {
+    padding: 12px 32px;
+    background-color: #fde68a;
+    color: #111827;
+    border-radius: 24px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+}
+
+.secondaryButton {
+    padding: 12px 32px;
+    background-color: transparent;
+    color: #374151;
+    border: 1px solid #fde68a;
+    border-radius: 26px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.31;
+    object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+    .heroSection {
+        margin-top: 2.5rem;
+    }
+
+    .columnsContainer {
+        flex-direction: column;
+    }
+
+    .leftColumn,
+    .rightColumn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .headingBlock {
+        padding-right: 1.25rem;
+    }
+
+    .headingText,
+    .highlightedText {
+        font-size: 2.25rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .buttonsContainer {
+        margin-top: 2.5rem;
+    }
+}

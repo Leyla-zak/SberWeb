@@ -1,0 +1,155 @@
+.subscription-section {
+    width: 1504px;
+    margin: 0 auto;
+}
+
+.subscription-container {
+    display: flex;
+    gap: 20px;
+}
+
+.subscription-image-wrapper {
+    width: 43%;
+}
+
+.subscription-image {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 1.04;
+}
+
+.subscription-form-wrapper {
+    width: 57%;
+    margin-left: 20px;
+}
+
+.subscription-form-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.form-content {
+    padding: 32px 40px 44px;
+    width: 100%;
+    background-color: white;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    color: #111827;
+}
+
+.form-title {
+    align-self: center;
+    font-size: 24px;
+    line-height: 1;
+    color: #111827;
+}
+
+.form-description {
+    margin-top: 8px;
+    font-size: 20px;
+    line-height: 32px;
+    color: #111827;
+}
+
+.subscription-form {
+    margin-top: 32px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1;
+    color: #6B7280;
+}
+
+.form-input {
+    overflow: hidden;
+    align-self: stretch;
+    padding: 12px 20px;
+    max-width: 100%;
+    width: 663px;
+    color: #6B7280;
+    background-color: white;
+    border-radius: 24px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.form-input:first-child {
+    margin-top: 0;
+}
+
+.submit-button {
+    overflow: hidden;
+    align-self: stretch;
+    padding: 12px 28px;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1;
+    color: black;
+    white-space: nowrap;
+    background-color: #FDE68A;
+    border-radius: 24px;
+    min-height: 48px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-divider {
+    width: 100%;
+    background-color: #E5E7EB;
+    min-height: 2px;
+}
+
+.form-footer {
+    padding: 24px 40px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #6B7280;
+    background-color: #F9FAFB;
+}
+
+.footer-link {
+    color: #111827;
+}
+
+@media (max-width: 768px) {
+    .subscription-section {
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+
+    .subscription-container {
+        flex-direction: column;
+    }
+
+    .subscription-image-wrapper,
+    .subscription-form-wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-content {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .form-description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+}

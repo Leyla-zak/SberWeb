@@ -1,0 +1,97 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2.75rem 5rem;
+    margin-top: 6rem;
+    width: 1504px;
+    background-color: white;
+    color: #111827;
+}
+
+/* Контейнер колонок */
+.columnsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+/* Колонка футера */
+.footerColumn {
+    min-width: 240px;
+    width: 300px;
+}
+
+.columnTitle {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #111827;
+}
+
+/* Навигация в колонке */
+.columnNav {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.columnLink {
+    display: block;
+    margin-top: 0.75rem;
+    color: #111827;
+    text-decoration: none;
+}
+
+.columnLink:first-child {
+    margin-top: 0;
+}
+
+/* Нижняя часть футера */
+.footerBottom {
+    margin-top: 3.5rem;
+    max-width: 100%;
+    width: 1296px;
+    font-size: 1rem;
+}
+
+.divider {
+    width: 100%;
+    background-color: #e5e7eb;
+    height: 1px;
+}
+
+.bottomContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.legalLinks {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    min-width: 240px;
+    text-align: center;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2.75rem 1.25rem;
+        margin-top: 2.5rem;
+    }
+
+    .columnsContainer {
+        gap: 1rem;
+    }
+
+    .footerBottom {
+        margin-top: 2.5rem;
+    }
+}

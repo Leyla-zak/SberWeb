@@ -1,0 +1,54 @@
+.directionsSection {
+    margin: 90px auto;
+    max-width: 1504px;
+    width: 100%;
+
+}
+
+.sectionTitle {
+    font-size: 40px;
+    line-height: 1;
+    text-align: center;
+    color: #111827;
+    margin-bottom: 24px;
+    font-weight: 80;
+}
+
+
+.directionsRow {
+    display: flex;
+    gap: 20px;
+    border-radius: 12px;
+}
+
+.directionsRow:not(:first-child) {
+    margin-top: 32px;
+}
+
+.directionCardWrapper {
+
+    width: 100%;
+    border-radius: 12px;
+    padding: 12px 32px;
+    background-color: #ffffff;
+    color: #111827;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1;
+
+}
+
+@media (max-width: 768px) {
+    .directionsSection {
+        margin-top: 40px;
+    }
+
+    .directionsRow {
+        flex-direction: column;
+    }
+
+    .directionCardWrapper {
+        width: 100%;
+        margin-left: 0 !important;
+    }
+}

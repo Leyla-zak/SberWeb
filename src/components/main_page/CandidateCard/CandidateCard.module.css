@@ -1,0 +1,140 @@
+.candidate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 40px;
+    width: 1504px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.badges-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.badge {
+    align-self: stretch;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.badge.part-time {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.badge.full-time {
+    background-color: #EDE9FE;
+    color: #5B21B6;
+}
+
+.candidate-image {
+    object-fit: contain;
+    margin-top: 20px;
+    max-width: 100%;
+    aspect-ratio: 1;
+    min-height: 104px;
+    border-radius: 102px;
+    width: 104px;
+}
+
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.candidate-name {
+    font-size: 20px;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.candidate-position {
+    align-self: center;
+    margin-top: 4px;
+    font-size: 16px;
+    color: #9CA3AF;
+}
+
+.candidate-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.detail-item {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: flex-start;
+    color: #111827;
+}
+
+.detail-item:not(:first-child) {
+    margin-top: 4px;
+}
+
+.view-button {
+    overflow: hidden;
+    align-self: stretch;
+    padding: 12px 32px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1;
+    color: #111827;
+    background-color: #FDE68A;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-button:hover {
+    background-color: #FCD34D;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .candidate-card {
+        padding: 20px;
+        margin-top: 32px;
+    }
+
+    .candidate-name {
+        font-size: 18px;
+    }
+
+    .candidate-position,
+    .candidate-details {
+        font-size: 14px;
+    }
+
+    .view-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
