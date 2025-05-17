@@ -1,9 +1,10 @@
 .candidates-section {
     width: 100%;
-    max-width: 1296px;
+    max-width: 1504px;
     padding: 0 20px;
     box-sizing: border-box;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .section-title {
@@ -22,9 +23,10 @@
 }
 
 .candidates-list {
-    display: inline-flex;
+    display: flex;
     gap: 20px;
     padding-bottom: 10px;
+    width: max-content;
 }
 
 .candidate-item {
@@ -32,7 +34,6 @@
     width: 300px;
 }
 
-/* Стили для скроллбара */
 .candidates-scroll-container::-webkit-scrollbar {
     height: 6px;
 }
@@ -47,7 +48,7 @@
     border-radius: 3px;
 }
 
-/* Адаптивность */
+
 @media (max-width: 768px) {
     .candidates-section {
         margin-top: 40px;

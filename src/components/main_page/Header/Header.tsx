@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import logo from "../../../pages/First/logo.png";
 import search from "../../../pages/First/search.png";
 import dropdown from "../../../pages/First/dropdown.png";
+import {Link} from "react-router-dom";
 
 const Header: React.FC = () => {
     return (
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
 
                 <div className={styles.mainNav}>
                     <ul className={styles.menuList}>
-                        <li className={styles.menuItem}>Найти кандидата</li>
+                        <li className={styles.menuItem}>Найти кандиадата</li>
                         <li className={styles.menuItem}>Попасть в базу</li>
                         <li className={styles.menuItem}>О сервисе</li>
                         <li className={styles.menuItem}>Портал</li>

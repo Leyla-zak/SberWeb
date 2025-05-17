@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/main_page/Header/Header';
 import Hero from './components/main_page/Hero/Hero';
 import DirectionSection from "./components/main_page/DirectionSection/DirectionSection";
@@ -8,10 +9,11 @@ import SubscriptionSection from "./components/main_page/SubscriptionSection/Subs
 import Footer from "./components/main_page/Footer/Footer";
 
 
+
 function App() {
   return (
       <div className="App">
-          <Header />
+          <Header />с
           <Hero/>
           <DirectionSection />
           <BenefitsSection />
