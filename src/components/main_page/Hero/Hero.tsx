@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import mainHero from "../../../pages/First/main_hero.png";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
     return (
@@ -22,12 +23,12 @@ const Hero: React.FC = () => {
                     </p>
 
                     <div className={styles.buttonsContainer}>
-                        <button className={styles.primaryButton}>
+                        <Link to="/candidates/search" className={styles.primaryButton}>
                             Выбрать кандидата
-                        </button>
-                        <button className={styles.secondaryButton}>
+                        </Link>
+                        <Link to="/resume-submission" className={styles.secondaryButton}>
                             Попасть в базу
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

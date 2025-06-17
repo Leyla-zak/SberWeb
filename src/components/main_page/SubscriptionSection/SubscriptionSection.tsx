@@ -63,10 +63,37 @@
 //
 // export default SubscriptionSection;
 
-import React from "react";
+import React, { useState } from "react";
 import Subscr from "../../../pages/Subscr.png"
+import { Link } from "react-router-dom";
 
 const SubscriptionSection: React.FC = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setSubmissionStatus('idle');
+
+        // Mock submission logic
+        console.log({
+            name,
+            email,
+            phone,
+        });
+
+        // Simulate API call
+        setTimeout(() => {
+            setSubmissionStatus('success');
+            // Optionally, clear form fields after success
+            setName('');
+            setEmail('');
+            setPhone('');
+        }, 1500);
+    };
+
     return (
         <section style={{
             width: '1504px',
@@ -137,7 +164,7 @@ const SubscriptionSection: React.FC = () => {
                                 </p>
                             </div>
 
-                            <form style={{
+                            <form onSubmit={handleSubmit} style={{
                                 marginTop: '32px',
                                 width: '100%',
                                 fontSize: '14px',
@@ -148,16 +175,22 @@ const SubscriptionSection: React.FC = () => {
                                     type="text"
                                     placeholder="Ваше имя"
                                     style={inputStyle}
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                 />
                                 <input
                                     type="email"
                                     placeholder="Email"
                                     style={{ ...inputStyle, marginTop: '20px' }}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                                 <input
                                     type="tel"
                                     placeholder="Номер телефона"
                                     style={{ ...inputStyle, marginTop: '20px' }}
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
                                 />
                                 <button
                                     type="submit"
@@ -183,6 +216,33 @@ const SubscriptionSection: React.FC = () => {
                                 >
                                     Подписаться
                                 </button>
+
+                                {submissionStatus === 'success' && (
+                                    <div style={{
+                                        marginTop: '20px',
+                                        padding: '12px 20px',
+                                        backgroundColor: '#D1FAE5',
+                                        color: '#065F46',
+                                        borderRadius: '8px',
+                                        textAlign: 'center',
+                                        fontSize: '16px'
+                                    }}>
+                                        Успешно! Спасибо за подписку.
+                                    </div>
+                                )}
+                                {submissionStatus === 'error' && (
+                                    <div style={{
+                                        marginTop: '20px',
+                                        padding: '12px 20px',
+                                        backgroundColor: '#FEE2E2',
+                                        color: '#991B1B',
+                                        borderRadius: '8px',
+                                        textAlign: 'center',
+                                        fontSize: '16px'
+                                    }}>
+                                        Произошла ошибка при отправке формы. Попробуйте еще раз.
+                                    </div>
+                                )}
                             </form>
                         </div>
 
@@ -202,8 +262,8 @@ const SubscriptionSection: React.FC = () => {
                         }}>
                             <p>
                                 Отправка данной формы означает согласие с{' '}
-                                <span style={{ color: '#111827', cursor: 'pointer' }}>Пользовательским соглашением</span> и{' '}
-                                <span style={{ color: '#111827', cursor: 'pointer' }}>Политикой конфиденциальности</span>
+                                <Link to="/terms-of-service" style={{ color: '#111827', cursor: 'pointer', textDecoration: 'none' }}>Пользовательским соглашением</Link> и{' '}
+                                <Link to="/privacy-policy" style={{ color: '#111827', cursor: 'pointer', textDecoration: 'none' }}>Политикой конфиденциальности</Link>
                             </p>
                         </div>
                     </div>

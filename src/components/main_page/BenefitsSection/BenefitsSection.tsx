@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./BenefitsSection.module.css";
 import checkmarkIcon from "../../../pages/checkmark-icon.png"
+import { Link } from "react-router-dom";
 
 interface BenefitPointProps {
     title: string;
@@ -59,9 +60,9 @@ const BenefitsSection: React.FC = () => {
                         <p className={styles.priceComparison}>
                             В 10-100 раз ниже стоимости любого подбора
                         </p>
-                        <button className={styles.subscriptionButton}>
+                        <Link to="/candidates/search" className={styles.subscriptionButton}>
                             Выбрать кандидата
-                        </button>
+                        </Link>
                         <p className={styles.largePriceText}>4 900</p>
                     </article>
                 </div>

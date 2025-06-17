@@ -56,35 +56,46 @@
 .buttonsContainer {
     display: flex;
     gap: 20px;
-    margin-top: 60px;
-    width: 500px;
-    max-width: 100%;
+    margin-top: 30px;
 }
 
 .primaryButton {
-    padding: 12px 32px;
+    padding: 15px 30px;
     background-color: #fde68a;
     color: #111827;
-    border-radius: 24px;
-    overflow: hidden;
-    font-size: 18px;
-    line-height: 1;
     border: none;
+    border-radius: 26px;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primaryButton:hover {
+    background-color: #fcd34d;
 }
 
 .secondaryButton {
-    padding: 12px 32px;
+    padding: 15px 30px;
     background-color: transparent;
-    color: #374151;
-    border: 1px solid #fde68a;
+    color: #111827;
+    border: 2px solid #F1DF6F;
     border-radius: 26px;
-    overflow: hidden;
     font-size: 18px;
-    line-height: 1;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
+.secondaryButton:hover {
+    background-color: #F1DF6F;
+    color: white;
+}
 
 .heroImage {
     width: 100%;
@@ -92,7 +103,6 @@
     aspect-ratio: 1.31;
     object-fit: contain;
 }
-
 
 @media (max-width: 768px) {
     .heroSection {

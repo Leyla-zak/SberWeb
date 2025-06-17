@@ -1,0 +1,451 @@
+.portalPage {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.companyInfo {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.companyLogo {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.companyInfo h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+.companyInfo p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.navButton {
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.navButton:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.navButton.active {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.content {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.addButton {
+    padding: 8px 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.addButton:hover {
+    background-color: #1565c0;
+}
+
+.tableContainer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #666;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+}
+
+.actionButton {
+    padding: 6px 12px;
+    background-color: #e3f2fd;
+    color: #1976d2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.actionButton:hover {
+    background-color: #bbdefb;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.statCard {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statCard h3 {
+    margin: 0 0 16px;
+    font-size: 16px;
+    color: #666;
+}
+
+.statNumber {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1976d2;
+    margin: 0;
+}
+
+.filters {
+    display: flex;
+    gap: 16px;
+}
+
+.filterSelect {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+}
+
+.editForm {
+    margin-top: 24px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.formGroup textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.formActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.cancelButton {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: #666;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.cancelButton:hover {
+    background-color: #e0e0e0;
+}
+
+.saveButton {
+    padding: 8px 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+    background-color: #1565c0;
+}
+
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.loginCard {
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.loginCard h1 {
+    margin: 0 0 16px;
+    font-size: 24px;
+    color: #333;
+}
+
+.loginCard p {
+    margin: 0 0 24px;
+    color: #666;
+}
+
+.loginForm {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.loginForm .formGroup {
+    margin-bottom: 16px;
+}
+
+.loginForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+.loginForm input:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+.loginForm input::placeholder {
+    color: #999;
+}
+
+.errorMessage {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.loginButton:hover:not(:disabled) {
+    background-color: #1565c0;
+}
+
+.loginButton:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+}
+
+.loginInfo {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #666;
+}
+
+.loginInfo p {
+    margin: 4px 0;
+}
+
+.logoutButton {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: #666;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .portalPage {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tableContainer {
+        overflow-x: auto;
+    }
+
+    .modalContent {
+        margin: 16px;
+        max-height: calc(100vh - 32px);
+    }
+} 

@@ -1,0 +1,158 @@
+.aboutPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.heroSection {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #4B5563;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.featuresSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.featureCard {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.featureCard h2 {
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.featureCard p {
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+.featureCard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.featureCard li {
+    color: #4B5563;
+    margin-bottom: 12px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.featureCard li:before {
+    content: "•";
+    color: #FDE68A;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+
+.statsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.statCard {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.statCard h3 {
+    font-size: 36px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.statCard p {
+    color: #4B5563;
+    font-size: 18px;
+}
+
+.contactSection {
+    text-align: center;
+    padding: 60px 0;
+    background: #F9FAFB;
+    border-radius: 12px;
+}
+
+.contactSection h2 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.contactSection > p {
+    color: #4B5563;
+    margin-bottom: 40px;
+}
+
+.contactInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contactItem {
+    padding: 20px;
+}
+
+.contactItem h3 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.contactItem p {
+    color: #4B5563;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .featuresSection {
+        grid-template-columns: 1fr;
+    }
+
+    .statsSection {
+        grid-template-columns: 1fr;
+    }
+
+    .contactInfo {
+        grid-template-columns: 1fr;
+    }
+} 

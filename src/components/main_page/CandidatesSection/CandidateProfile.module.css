@@ -1,0 +1,211 @@
+.profilePage {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.headerCard {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+.headerInfo {
+    flex: 1;
+}
+.headerTop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.name {
+    font-size: 24px;
+    font-weight: 600;
+}
+.age {
+    color: #888;
+}
+.typeTag {
+    background: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.position {
+    color: #666;
+}
+.location {
+    color: #666;
+    margin-bottom: 8px;
+}
+.status {
+    color: #666;
+    margin-bottom: 16px;
+}
+.contactBtn {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.contactBtn:hover {
+    background: #0056b3;
+}
+.headerActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 32px;
+}
+.actionBtn {
+    background: #fff;
+    border: 1px solid #f7e08c;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #222;
+    transition: background 0.2s;
+}
+.actionBtn:hover {
+    background: #f7e08c;
+}
+.contentGrid {
+    display: flex;
+    gap: 32px;
+}
+.leftCol, .rightCol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.portfolio {
+    color: #e11d48;
+    font-weight: bold;
+}
+.example {
+    color: #e11d48;
+    margin-bottom: 4px;
+}
+.buyBtn {
+    background: #f7e08c;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.hideLink {
+    color: #888;
+    font-size: 13px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modalContent {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.formGroup label {
+    font-weight: 500;
+    color: #333;
+}
+.formGroup input,
+.formGroup textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.formGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.submitButton {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 16px;
+}
+.submitButton:hover {
+    background: #0056b3;
+}
+.successMessage {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.successMessage h2 {
+    color: #007AFF;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.successMessage p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}

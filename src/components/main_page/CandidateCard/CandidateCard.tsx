@@ -1,74 +1,5 @@
-// import React from "react";
-// import styles from "./CandidateCard.module.css";
-//
-// interface BadgeProps {
-//     text: string;
-//     type: "part-time" | "full-time";
-// }
-//
-// const Badge: React.FC<BadgeProps> = ({ text, type }) => {
-//     return (
-//         <span className={`${styles.badge} ${styles[type]}`}>
-//             {text}
-//         </span>
-//     );
-// };
-//
-// interface CandidateCardProps {
-//     name: string;
-//     position: string;
-//     experience: string;
-//     salary: string;
-//     image: string;
-//     badges: Array<{ text: string; type: "part-time" | "full-time" }>;
-// }
-//
-// const CandidateCard: React.FC<CandidateCardProps> = ({
-//                                                          name,
-//                                                          position,
-//                                                          experience,
-//                                                          salary,
-//                                                          image,
-//                                                          badges,
-//                                                      }) => {
-//     return (
-//         <article className={styles.candidateCard}>
-//             <div className={styles.cardContent}>
-//                 <div className={styles.badgesContainer}>
-//                     {badges.map((badge, index) => (
-//                         <Badge key={index} text={badge.text} type={badge.type} />
-//                     ))}
-//                 </div>
-//                 <img
-//                     src={image}
-//                     className={styles.candidateImage}
-//                     alt={name}
-//                 />
-//                 <div className={styles.candidateInfo}>
-//                     <h3 className={styles.candidateName}>{name}</h3>
-//                     <p className={styles.candidatePosition}>{position}</p>
-//                 </div>
-//                 <div className={styles.candidateDetails}>
-//                     <div className={styles.detailItem}>
-//                         <span>Опыт:</span>
-//                         <span>{experience}</span>
-//                     </div>
-//                     <div className={styles.detailItem}>
-//                         <span>Зарплата:</span>
-//                         <span>{salary}</span>
-//                     </div>
-//                 </div>
-//                 <button className={styles.viewButton}>
-//                     Посмотреть справку
-//                 </button>
-//             </div>
-//         </article>
-//     );
-// };
-//
-// export default CandidateCard;
-
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface BadgeProps {
     text: string;
@@ -103,6 +34,7 @@ const Badge: React.FC<BadgeProps> = ({ text, type }) => {
 };
 
 interface CandidateCardProps {
+    id: number;
     name: string;
     position: string;
     experience: string;
@@ -112,6 +44,7 @@ interface CandidateCardProps {
 }
 
 const CandidateCard: React.FC<CandidateCardProps> = ({
+                                                         id,
                                                          name,
                                                          position,
                                                          experience,
@@ -215,7 +148,7 @@ const CandidateCard: React.FC<CandidateCardProps> = ({
                         <span>{salary}</span>
                     </div>
                 </div>
-                <button style={{
+                <Link to={`/candidates/${id}`} style={{
                     overflow: 'hidden',
                     alignSelf: 'stretch',
                     padding: '12px 32px',
@@ -227,11 +160,14 @@ const CandidateCard: React.FC<CandidateCardProps> = ({
                     borderRadius: '24px',
                     border: 'none',
                     cursor: 'pointer',
-                    transition: 'background-color 0.2s'
+                    transition: 'background-color 0.2s',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    textAlign: 'center'
                 }} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#FCD34D'}
                         onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#FDE68A'}>
                     Посмотреть справку
-                </button>
+                </Link>
             </div>
         </article>
     );
